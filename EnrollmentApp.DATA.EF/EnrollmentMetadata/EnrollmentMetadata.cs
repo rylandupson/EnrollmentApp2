@@ -11,8 +11,8 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
 
     public class EnrollmentMetadata
     {
-        [Required]
-        public int EnrollmentID { get; set; }
+        //[Required]
+        //public int EnrollmentID { get; set; }
 
         [Required]
         public int StudentID { get; set; }
@@ -37,8 +37,8 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
     #region Cours
 
     public class CoursMetadata{
-        [Required]
-        public int CourseID { get; set; }
+        //[Required]
+        //public int CourseID { get; set; }
 
         [StringLength(50, ErrorMessage = "Value must be 50 characters or less")]
         [Required]
@@ -67,17 +67,19 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
     #region Scheduled Class
     public class ScheduledClassMetadata
     {
-        [Required]
-        public int ScheduledClassID { get; set; }
+        //[Required]
+        //public int ScheduledClassID { get; set; }
 
         [Required]
         public int CourseID { get; set; }
 
         [Required]
-        public DateTime StartDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}", ApplyFormatInEditMode = true)]
+        public System.DateTime StartDate { get; set; }
 
         [Required]
-        public DateTime EndDate { get; set; }
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public System.DateTime EndDate { get; set; }
 
         [Required]
         [StringLength(40, ErrorMessage = "Value must be 40 characters or less")]
@@ -90,11 +92,14 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
         [Required]
         public int SCSID { get; set; }
     }
+
+    //[MetadataType(typeof(CoursMetadata))]
     public partial class ScheduledClass
     {
+
         public string ClassInfo
         {
-            get { return StartDate + " " + InstructorName + ""+ Location; }
+            get { return StartDate + " " + Cours.CourseName + " " + Location; }
         }
 
     }
@@ -103,8 +108,8 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
         #region ScheduledClassStatus
     public class ScheduledClassStatusMetadata
     {
-        [Required]
-        public int SCSID { get; set; }
+        //[Required]
+        //public int SCSID { get; set; }
 
         [StringLength(50, ErrorMessage = "Value must be 50 characters or less")]
         [Required]
@@ -120,8 +125,8 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
     #region Student
     public class StudentMetadata
     {
-        [Required]
-        public int StudentID { get; set; }
+        //[Required]
+        //public int StudentID { get; set; }
 
         [StringLength(20, ErrorMessage = "Value must be 20 characters or less")]
         [Required]

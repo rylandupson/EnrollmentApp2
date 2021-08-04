@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnrollmentApp.DATA.EF.Metadata
+namespace test
 {
-    class EnrollmentMetadata
+    public class Class1
     {
     }
 }

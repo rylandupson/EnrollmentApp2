@@ -71,6 +71,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Enrollment.tt</DependentUpon>
     </Compile>
+    <Compile Include="EnrollmentMetadata\EnrollmentMetadata.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ScheduledClass.cs">
       <DependentUpon>Enrollment.tt</DependentUpon>
@@ -112,6 +113,12 @@
       <DependentUpon>Enrollment.edmx</DependentUpon>
       <LastGenOutput>Enrollment1.cs</LastGenOutput>
     </Content>
+    <Content Include="Scripts\jquery-1.4.4-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.4.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
