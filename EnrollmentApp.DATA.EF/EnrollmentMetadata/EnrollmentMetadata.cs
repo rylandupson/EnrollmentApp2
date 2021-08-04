@@ -92,6 +92,10 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
     }
     public partial class ScheduledClass
     {
+        public string ClassInfo
+        {
+            get { return StartDate + " " + InstructorName + ""+ Location; }
+        }
 
     }
     #endregion
@@ -158,7 +162,10 @@ namespace EnrollmentApp.DATA.EF//.EnrollmentMetadata
     }
     public partial class Student
     {
-
+        public string FullName
+        {
+            get { return FirstName + " " + LastName; }
+        }
     }
     #endregion
 
