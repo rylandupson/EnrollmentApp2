@@ -1,4 +1,6 @@
 ﻿<!DOCTYPE html>
+<title>@ViewBag.Title</title>
+
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -12,9 +14,11 @@
     https://templatemo.com/tm-455-visual-admin
     -->
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,700' rel='stylesheet' type='text/css'>
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/templatemo-style.css" rel="stylesheet">
+    @*<link href="~/Content/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/css/templatemo-style.css" rel="stylesheet">*@
+
+    @Styles.Render("~/Content/css")
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,7 +37,7 @@
                 <h1>Visual Admin</h1>
             </header>
             <div class="profile-photo-container">
-                <img src="images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">
+                <img src="~/Content/images/profile-photo.jpg" alt="Profile Photo" class="img-responsive">
                 <div class="profile-photo-overlay"></div>
             </div>
             <!-- Search box -->
@@ -77,8 +81,7 @@
     </div>
 
     <!-- JS -->
-    <script src="js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
-    <script src="js/jquery-migrate-1.2.1.min.js"></script> <!--  jQuery Migrate Plugin -->
+    @Scripts.Render("~/bundles/template")
     <script src="https://www.google.com/jsapi"></script> <!-- Google Chart -->
     <script>
       /* Google Chart
@@ -137,7 +140,8 @@
       });
 
     </script>
-    <script type="text/javascript" src="js/templatemo-script.js"></script>      <!-- Templatemo Script -->
+    <script type="text/javascript" src="~/Scripts/js/templatemo-script.js"></script>      <!-- Templatemo Script -->]
+    @RenderSection("scripts", required: false)
 
 </body>
 </html>
