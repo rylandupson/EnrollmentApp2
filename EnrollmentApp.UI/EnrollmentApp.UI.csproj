@@ -202,15 +202,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\bootstrap.min.css" />
-    <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\fonts\font-awesome.min.css" />
     <Content Include="Content\css\templatemo-style.css" />
     <Content Include="Content\images\bicycle.jpg" />
     <Content Include="Content\images\checkbox-radio-sheet.png" />
     <Content Include="Content\images\person.jpg" />
     <Content Include="Content\images\profile-photo.jpg" />
+    <Content Include="Content\images\StudentImages\default.png" />
     <Content Include="Content\images\sunset-big.jpg" />
     <Content Include="Content\images\sunset.jpg" />
-    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -223,7 +224,7 @@
     <Content Include="_Archive\bootstrap.css" />
     <Content Include="_Archive\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="_Archive\Site.css" />
     <Content Include="Scripts\bootstrap.js" />
@@ -271,11 +272,11 @@
     <Content Include="_Archive\templatemo_455_visual_admin\manage-users.html" />
     <Content Include="_Archive\templatemo_455_visual_admin\maps.html" />
     <Content Include="_Archive\templatemo_455_visual_admin\preferences.html" />
-    <Content Include="fonts\fontawesome-webfont.eot" />
-    <Content Include="fonts\fontawesome-webfont.ttf" />
-    <Content Include="fonts\fontawesome-webfont.woff" />
-    <Content Include="fonts\fontawesome-webfont.woff2" />
-    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Content\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -369,10 +370,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="_Archive\bootstrap.min.css.map" />
     <Content Include="_Archive\bootstrap.css.map" />
     <Content Include="_Archive\bootstrap-theme.min.css.map" />

@@ -15,6 +15,7 @@ namespace EnrollmentApp.UI.Controllers
         private EnrollmentEntities db = new EnrollmentEntities();
 
         // GET: ScheduledClasses
+        [Authorize(Roles = "Admin, Scheduling")]
         public ActionResult Index()
         {
             var scheduledClasses = db.ScheduledClasses.Include(s => s.Cours).Include(s => s.ScheduledClassStatus);
@@ -22,6 +23,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: ScheduledClasses/Details/5
+        [Authorize(Roles = "Admin, Scheduling")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: ScheduledClasses/Create
+        [Authorize(Roles = "Admin, Scheduling")]
         public ActionResult Create()
         {
             ViewBag.CourseID = new SelectList(db.Courses, "CourseID", "CourseName");
@@ -64,6 +67,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: ScheduledClasses/Edit/5
+        [Authorize(Roles = "Admin, Scheduling")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -99,6 +103,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: ScheduledClasses/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)

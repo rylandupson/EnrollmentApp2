@@ -9,7 +9,8 @@ using System.Web.Mvc;
 using EnrollmentApp.DATA.EF;
 
 namespace EnrollmentApp.UI.Controllers
-{[Authorize(Roles ="Admin")]
+{
+    [Authorize(Roles ="Admin")]
     public class CoursController : Controller
     {
         private EnrollmentEntities db = new EnrollmentEntities();

@@ -19,17 +19,18 @@ namespace EnrollmentApp.UI
                         "~/Scripts/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
+                      //"~/Scripts/respond.js",
+                      "~/Scripts/js/bootstrap.min.js",
+                      "~/Scripts/js/bootstrap-filestyle.min.js",
                       "~/Scripts/js/jquery-1.11.2.min.js",
-                      "~/Scripts/js/jquery-migrate-1.2.1.min.js"));
+                      "~/Scripts/js/jquery-migrate-1.2.1.min.js",
+                      "~/Scripts/js/templatemo-script.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap.css",
-                      "~/Content/site.css",
-                      "~/Content/css/font-awesome.min.css",
                       "~/Content/css/bootstrap.min.css",
+                      //"~/Content/css/font-awesome.min.css",
                       "~/Content/css/templatemo-style.css"));
+                      /*"~/Content/site.css"*/
         }
     }
 }

@@ -15,6 +15,7 @@ namespace EnrollmentApp.UI.Controllers
         private EnrollmentEntities db = new EnrollmentEntities();
 
         // GET: Students
+        [Authorize(Roles = "Admin, Scheduling")]
         public ActionResult Index()
         {
             var students = db.Students.Include(s => s.StudentStatus);
@@ -22,6 +23,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: Students/Details/5
+        [Authorize(Roles = "Admin, Scheduling")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,6 +39,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: Students/Create
+        [Authorize(Roles = "Admin")]
         public ActionResult Create()
         {
             ViewBag.SSID = new SelectList(db.StudentStatuses, "SSID", "SSName");
@@ -62,6 +65,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: Students/Edit/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -95,6 +99,7 @@ namespace EnrollmentApp.UI.Controllers
         }
 
         // GET: Students/Delete/5
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
