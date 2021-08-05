@@ -19,12 +19,12 @@
         </dd>
 
         @*<dt>
-            @Html.DisplayNameFor(model => model.LastName)
-        </dt>
+                @Html.DisplayNameFor(model => model.LastName)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.LastName)
-        </dd>*@
+            <dd>
+                @Html.DisplayFor(model => model.LastName)
+            </dd>*@
 
         <dt>
             @Html.DisplayNameFor(model => model.Major)
@@ -83,14 +83,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.PhotoURL)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.PhotoURL)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.StudentStatus.SSName)
         </dt>
 
@@ -99,6 +91,11 @@
         </dd>
 
     </dl>
+
+    <div class="col-md-6">
+        <img src="~/Content/images/StudentImages/@Model.PhotoURL" alt="@Model.FullName" title="@Model.FullName" />
+    </div>
+
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |

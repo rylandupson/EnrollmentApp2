@@ -10,6 +10,7 @@ using EnrollmentApp.DATA.EF;
 
 namespace EnrollmentApp.UI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class StudentStatusController : Controller
     {
         private EnrollmentEntities db = new EnrollmentEntities();

@@ -10,7 +10,7 @@ using EnrollmentApp.DATA.EF;
 
 namespace EnrollmentApp.UI.Controllers
 {
-    [Authorize(Roles = "Admin, scheduling")]
+    [Authorize(Roles = "Admin, Scheduling")]
     public class EnrollmentsController : Controller
     {
         private EnrollmentEntities db = new EnrollmentEntities();
