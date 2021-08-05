@@ -7,10 +7,10 @@
 <h2>Edit</h2>
 
 
-@using (Html.BeginForm())
+@using (Html.BeginForm("Edit", "Students", FormMethod.Post, new { @enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Student</h4>
         <hr />
@@ -89,13 +89,25 @@
             </div>
         </div>
 
+        @*<div class="form-group">
+                @Html.LabelFor(model => model.PhotoURL, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.PhotoURL, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.PhotoURL, "", new { @class = "text-danger" })
+                </div>
+            </div>*@
+
         <div class="form-group">
             @Html.LabelFor(model => model.PhotoURL, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.PhotoURL, new { htmlAttributes = new { @class = "form-control" } })
+                @*@Html.EditorFor(model => model.BookImage, new { htmlAttributes = new { @class = "form-control" } })*@
+                <img src="~/Content/images/StudentImages/@Model.PhotoURL" alt="@Model.FullName" style="max-width: 100px;" />
+                <hr />
+                <input type="file" name="photo" />
                 @Html.ValidationMessageFor(model => model.PhotoURL, "", new { @class = "text-danger" })
             </div>
         </div>
+
 
         <div class="form-group">
             @Html.LabelFor(model => model.SSID, "SSID", htmlAttributes: new { @class = "control-label col-md-2" })

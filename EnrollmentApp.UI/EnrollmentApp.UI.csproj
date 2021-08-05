@@ -199,6 +199,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utilities\ImageUtility.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\css\bootstrap.min.css" />
@@ -209,6 +210,7 @@
     <Content Include="Content\images\person.jpg" />
     <Content Include="Content\images\profile-photo.jpg" />
     <Content Include="Content\images\StudentImages\default.png" />
+    <Content Include="Content\images\StudentImages\John Smith.jfif" />
     <Content Include="Content\images\sunset-big.jpg" />
     <Content Include="Content\images\sunset.jpg" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
