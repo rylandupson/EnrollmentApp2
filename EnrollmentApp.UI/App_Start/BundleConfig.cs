@@ -7,8 +7,8 @@ namespace EnrollmentApp.UI
         // For more information on bundling, visit http://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
-            bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
-                        "~/Scripts/jquery-{version}.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
+            //            "~/Scripts/jquery-{version}.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
@@ -18,19 +18,27 @@ namespace EnrollmentApp.UI
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
                         "~/Scripts/modernizr-*"));
 
-            bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
-                      //"~/Scripts/respond.js",
-                      "~/Scripts/js/bootstrap.min.js",
-                      "~/Scripts/js/bootstrap-filestyle.min.js",
-                      "~/Scripts/js/jquery-1.11.2.min.js",
-                      "~/Scripts/js/jquery-migrate-1.2.1.min.js",
-                      "~/Scripts/js/templatemo-script.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+            //"~/Scripts/respond.js",
+            bundles.Add(new ScriptBundle("~/bundles/template").Include(
+
+                 //"~/Scripts/js/templatemo-script.js",
+                 "~/Scripts/jquery-3.3.1.min.js",
+                    "~/Scripts/bootstrap.min.js",
+                    "~/Scripts/Datatables/jquery.datatables.min.js"
+                      //"~/Scripts/js/jquery-1.11.2.min.js",
+                      //  "~/Scripts/js/jquery-migrate-1.2.1.min.js",
+                      //"~/Scripts/js/bootstrap-filestyle.min.js"
+                      ));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/css/bootstrap.min.css",
-                      //"~/Content/css/font-awesome.min.css",
-                      "~/Content/css/templatemo-style.css"));
-                      /*"~/Content/site.css"*/
+                "~/Content/css/templatemo-style.css",
+                "~/Content/css/bootstrap.min.css",
+                      "~/Content/css/font-awesome.min.css",
+                      "~/Scripts/Datatables/jquery.datatables.min.js",
+            "~/Content/css/style.css"));
+
+            /*"~/Content/site.css"*/
         }
     }
 }
